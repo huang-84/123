@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字母气球大冒险</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero-card" aria-labelledby="game-title">
+        <p class="eyebrow">Alphabet Balloon Pop</p>
+        <h1 id="game-title">字母气球大冒险</h1>
+        <p class="intro">听提示、找字母、戳气球！在 60 秒内尽可能拿到高分。</p>
+
+        <div class="status-grid" aria-label="游戏状态">
+          <div>
+            <span>目标字母</span>
+            <strong id="targetLetter">A</strong>
+          </div>
+          <div>
+            <span>分数</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>剩余时间</span>
+            <strong><span id="timeLeft">60</span>s</strong>
+          </div>
+          <div>
+            <span>连击</span>
+            <strong id="combo">0</strong>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="startBtn" type="button">开始游戏</button>
+          <button id="soundBtn" type="button" aria-pressed="true">🔊 读出目标</button>
+        </div>
+        <p id="message" class="message" role="status">点击开始，准备寻找闪亮字母吧！</p>
+      </section>
+
+      <section class="playground" aria-label="字母气球区域">
+        <div id="balloonField" class="balloon-field"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
